@@ -1,9 +1,55 @@
-body {
-    margin-bottom: 2rem;
+:root {
+    color-scheme: dark light;
 }
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+        color: #eee;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #fff;
+        color: #333;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.mouse {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.page .item,
+.mouse .item {
+    margin: 2px;
+}
+
 
 footer {
     position: fixed;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
+
