@@ -44,6 +44,34 @@ main {
     margin: 2px;
 }
 
+.keyboard {
+    display: grid;
+    gap: 2px;
+    width: 80vw;
+    min-width: 800px;
+    max-width: 1200px;
+    margin: 10vh 10vw;
+}
+
+.keyboard .row {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 2px;
+    grid-auto-flow: column;
+}
+
+.keyboard .row div.key {
+    min-width: 40px;
+    height: 40px;
+    border: thin solid #000;
+    text-align: center;
+    line-height: 40px;
+}
+
+.keyboard .row div.key.pressed {
+    transform: scale(1.1);
+    outline: 2px solid yellow;
+}
 
 footer {
     position: fixed;
