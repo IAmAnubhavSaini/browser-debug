@@ -64,7 +64,7 @@ function keydownHandler(event) {
 
 }
 
-function keyupHandler(event) {
+function keyupHandler() {
     const pressedKey = document.querySelector('.key.pressed');
     if (pressedKey) pressedKey.classList.remove('pressed');
 }
