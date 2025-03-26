@@ -1,83 +1,72 @@
 :root {
-    color-scheme: dark light;
+  color-scheme: dark light;
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: #333;
-        color: #eee;
-    }
+  body {
+    background-color: #333;
+    color: #eee;
+  }
 }
 
 @media (prefers-color-scheme: light) {
-    body {
-        background-color: #fff;
-        color: #333;
-    }
+  body {
+    background-color: #fff;
+    color: #333;
+  }
 }
 
 body {
-    margin: 0;
-    padding: 40px;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.mouse {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.page .item,
-.mouse .item {
-    margin: 2px;
+  margin: 1vh 1vw;
+  padding: 1vh 1vw;
+  font-family: monospace;
 }
 
 .keyboard {
-    display: grid;
-    gap: 2px;
-    width: 80vw;
-    min-width: 800px;
-    max-width: 1200px;
-    margin: 10vh 10vw;
+  display: grid;
+  gap: 2px;
+  min-width: 800px;
+  max-width: 1200px;
+  margin: 1vh 1vw;
 }
 
 .keyboard .row {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    gap: 2px;
-    grid-auto-flow: column;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 2px;
+  grid-auto-flow: column;
 }
 
 .keyboard .row div.key {
-    min-width: 40px;
-    height: 40px;
-    border: thin solid #000;
-    text-align: center;
-    line-height: 40px;
+  min-width: 20px;
+  height: 40px;
+  border: thin solid #000;
+  text-align: center;
+  line-height: 40px;
 }
 
 .keyboard .row div.key.pressed {
-    transform: scale(1.1);
-    outline: 2px solid yellow;
+  transform: scale(1.1);
+  outline: 2px solid yellow;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+.vflex,
+.flex {
+  display: flex;
+  gap: 2px 10px;
 }
 
+.vflex {
+  flex-direction: column;
+}
 
+.flex :first-child {
+  text-align: right;
+  min-width: 200px;
+}
